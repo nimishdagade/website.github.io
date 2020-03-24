@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -28,16 +29,10 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+
 </head>
 
 <body>
-<form action="/connect.php" method="POST">  
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -45,7 +40,7 @@
       <div id="logo" class="pull-left">
         <h1><a href="#body" class="scrollto"><span>Q</span>uickPenaltyPay</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a> -->
       </div>
 
       <nav id="nav-menu-container">
@@ -70,7 +65,7 @@
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="demopay.html"><i class="fa fa-play fa-3x"></i> Google Play</a>
         <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
       </div>
     </div>
@@ -85,44 +80,69 @@
       <div class="section-title text-center" >
 
         <h2>Payment for Penalty </h2>
-        <p class="separator">If Your Car Was Unlawful Parked And It Was Locked, Unlock It By Easy Payment  .</p>
+        <p class="separator">If Your Car Was Unlawful Parked And It Was Locked, Unlock It By Easy Payment .</p>
 
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="form">
+        <div id="sendmessage">Your message has been sent. Thank you!</div>
+        <div id="errormessage"></div>
+        <form action="" method="post" role="form" class="infoForm">
 
-        <div class="col-sm-5 col-lg-6">
-          <div class="feature-block">
+          <div class="row">
 
-            <img src="img/svg/cloud.svg" alt="img" class="img-fluid">
-            <h4>Enter You Vechicle Number: </h4>
-            <input type="text" class="form-control " placeholder="GJ01AB1234" name="RegNo" >            
-            <p>    </p>
-            <h4>Enter You Email Address: </h4>
-            <input type="email" class="form-control " placeholder="abc@gmail.com" name="email" >
+            <div class="col-sm-5 col-lg-6">
+              <div class="feature-block">
+
+                <img src="img/svg/cloud.svg" alt="img" class="img-fluid">
+                <h4>Enter You Vechicle Number: </h4>
+                <div class="infoform-group">
+                  <input type="text" class="form-control" name="regno" id="regno" placeholder="GJO1AB1234" data-rule="minlen:8" data-msg="Please enter at least 10 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <br>
+                <h4>Enter You Email Address: </h4>
+                <div class="infoform-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-sm-5 col-lg-6">
+              <div class="feature-block">
+
+                <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
+                <h4>Enter Value For Human Verfication : 15 + 101 </h4>
+                <div class="infoform-group">
+                  <input type="text" class="form-control" name="captcha" id="captcha" placeholder="" data-rule="required" data-msg="Please enter a valid captcha" />
+                  <div class="validation"></div>
+                </div>
+                <br>     
+                <h4>Press Submit Button for Further Payment: </h4>
+                <div class="row">
+                <div class="col-md-5 col-lg-5">
+                  <div class="text-center"><button type="submit">Pay</button></div>
+                </div>
+                <div class="col-md-5 col-lg-5">
+                  <div class="text-center"><button type="button" onclick="unlockbtn()">Unlock</button></div>
+                </div>
+              </div>
+            </div>
+            </div>
 
           </div>
-        </div>
 
-        <div class="col-sm-5 col-lg-6">
-          <div class="feature-block">
-
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-            <h4>Enter Value For Human Verfication : 15 + 101 </h4>
-            <input type="text" class="form-control " placeholder="" name="captcha" >       
-            <p>   </p>     
-            <h4>Press Submit Button for Further Payment: </h4>
-            <div class="text-center"><button type="submit">Submit</button></div>
-
-          </div>
-        </div>
-
+        </form>
+        
       </div>
     </div>
-
   </section>
+  
+
 
   <!--==========================
     About Us Section
@@ -138,8 +158,8 @@
         <div class="col-md-7 col-lg-5">
           <div class="about-content">
 
-            <h2><span>QuickPenaltyPay</span>fastest Payment </h2>
-            <p> Get rid of going to Car Towing Station, We had Automate it in better way For User to just pay online and get your car unlock in just a inute. 
+            <h2><span>Quick Penalty Pay</span><br>fastest Payment </h2>
+            <p> Get rid of going to Car Towing Station, We had Automate it in better way For User to just pay online and get your car unlock in just a minute. 
             </p>
 
             <ul class="list-unstyled">
@@ -231,7 +251,7 @@
             <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
           </div>
 
-        </div>
+         </div>
 
         <div class="col-lg-5 col-md-8">
           <div class="form">
@@ -272,9 +292,8 @@
         <div class="col-md-12 col-lg-4">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">eStartup</a>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
-
+            <a class="navbar-brand" href="#">QuickPenaltyPay</a>
+            <p> Get rid of going to Car Towing Station, We had Automate it in better way For User to just pay online and get your car unlock in just a minute.  </p>
           </div>
         </div>
 
@@ -351,8 +370,7 @@
     </div>
 
   </footer>
-
-
+  
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
@@ -366,11 +384,13 @@
   <script src="lib/modal-video/js/modal-video.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
+  
   <!-- Contact Form JavaScript File -->
+  <script src="infoform/infoform.js"></script>
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-</form>
+
 </body>
 </html>
