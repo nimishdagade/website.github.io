@@ -1,4 +1,3 @@
-var flag=false;
 jQuery(document).ready(function($) {
   "use strict";
 
@@ -59,28 +58,12 @@ jQuery(document).ready(function($) {
       }
     });
 
-   // if(!ferror) {	
-//	window.location.href="https://pmny.in/2I6qCkD5R7F7";
-
 	if(!ferror) {
-		window.location.href="https://p-y.tm/eM-VFXg";
-		flag=true;
+		var flag=true;
+		sessionStorage.setItem("12", flag);
+		window.location.href="https://pmny.in/2I6qCkD5R7F7";
 	}
-
 	
-
-//	setTimeout(() => {  //console.log("World!"); 
-//		var req = new XMLHttpRequest();
-//		var currentURL = window.location.href;
-//		alert(currentURL);
-//		req.open('POST',window.location.href, false);
-//		req.send(null);
-//		alert(headers);
-//	}, 5000);
-	
-//window.location.href="https://paytm.business/theia/linkPaymentRedirect";
-	
-//	
 	return false;
   });
 	
@@ -88,14 +71,16 @@ jQuery(document).ready(function($) {
 
 
 function unlockbtn(){
+	var flag = sessionStorage.getItem("12");
 	if(flag){
-		var field1=0,field2=0,field3=0;
+	  var field1=0,field2=0,field3=0;
+          
+		$("#sendmessage").addClass("show");
+		sessionStorage.clear();
+	  	alert("Your Car Has Unlocked Successfully. Thank You!");
 		var strlink="https://api.thingspeak.com/update?api_key=JXX0WSZKT9AGCDRP&field1="+field1+"&field2="+field2+"&field3="+field3;
 		window.location.href=strlink;    
+		
 	}
 }
 
-
-   
-
-  
