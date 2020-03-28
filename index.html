@@ -64,7 +64,7 @@
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
         <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
         <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>
+      </div>  
     </div>
   </section><!-- #hero -->
 
@@ -94,15 +94,30 @@
               <div class="feature-block">
 
                 <img src="img/svg/cloud.svg" alt="img" class="img-fluid">
-                <h4>Enter You Vechicle Number: </h4>
-                <div class="infoform-group">
-                  <input type="text" class="form-control" name="regno" id="regno" placeholder="GJO1AB1234" data-rule="minlen:8" data-msg="Please enter at least 10 chars of subject" />
-                  <div class="validation"></div>
+                
+                <div class="row">
+                  <div class="col-sm-5 col-lg-5">
+                    <h4>Enter You Name: </h4>
+                    <div class="infoform-group">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="name surname" data-rule="required" data-msg="Please Enter Your Name" />
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-7 col-lg-7">
+                    <h4>Enter You Vechicle Number: </h4>
+                    <div class="infoform-group">
+                      <input type="text" class="form-control" name="regno" id="regno" placeholder="GJO1AB1234" data-rule="minlen:8" data-msg="Please Enter Your Vehicle Number" />
+                      <div class="validation"></div>
+                    </div>
+                  </div>
                 </div>
+
                 <br>
+
                 <h4>Enter You Email Address: </h4>
                 <div class="infoform-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please Enter A Valid Email" />
                   <div class="validation"></div>
                 </div>
 
@@ -113,17 +128,31 @@
               <div class="feature-block">
 
                 <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-                <h4>Enter Value For Human Verfication : 15 + 101 </h4>
-                <div class="infoform-group">
-                  <input type="text" class="form-control" name="captcha" id="captcha" placeholder="" data-rule="required" data-msg="Please enter a valid captcha" />
-                  <div class="validation"></div>
+
+                <div class="row">
+                  <div class="col-sm-5 col-lg-5">
+                    <h4>Enter Your Phone Number </h4>
+                    <div class="infoform-group">
+                      <input type="text" class="form-control" name="phone_no" id="phone_no" placeholder="1234567890" data-rule="minlen:10" data-msg="Please Enter Your Mobile Number" />
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-7 col-lg-7">
+                    <h4>Enter Value For Human Verfication : 15 + 101 </h4>
+                    <div class="infoform-group">
+                      <input type="text" class="form-control" name="captcha" id="captcha" placeholder="" data-rule="required" data-msg="Please Enter A Valid Captcha" />
+                      <div class="validation"></div>
+                    </div>
+                  </div>
                 </div>
+
                 <br>     
                 <h4>Press Submit Button for Further Payment: </h4>
                 <div class="row">
                 <div class="col-xs-2 col-lg-2"></div>
                 <div class="col-xs-4 col-lg-4">
-                  <div class="text-center"><button type="submit"><b>Payment</b></button></div>
+                  <div class="text-center"><button type="submit" ><b>Payment</b></button></div>
                 </div>
                 <div class="col-xs-4 col-lg-4">
                   <div class="text-center"><button type="button" onclick="unlockbtn()"><b>Unlock</b></button></div>
@@ -385,12 +414,21 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
 
-  
+
+  <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js"></script> -->
+  <script src="js/firebase.js"></script>
+
   <!-- Contact Form JavaScript File -->
-  <script src="infoform/infoform.js"></script>
+  <script src="infoform/infoform.js "></script>
   <script src="contactform/contactform.js"></script>
+
+  <!-- FIREBASE CONNECTION CONTENT -->
+  <!-- <script src="js/firebase.js"></script> -->
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+
 </body>
 </html>

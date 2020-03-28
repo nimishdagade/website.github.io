@@ -59,8 +59,9 @@ jQuery(document).ready(function($) {
     });
 
 	if(!ferror) {
-		var flag=true;
-		sessionStorage.setItem("12", flag);
+		var flag_unlock=true;
+		sessionStorage.setItem("34", flag_unlock);
+		writeData();
 		window.location.href="https://pmny.in/2I6qCkD5R7F7";
 	}
 	
@@ -71,8 +72,8 @@ jQuery(document).ready(function($) {
 
 
 function unlockbtn(){
-	var flag = sessionStorage.getItem("12");
-	if(flag){
+	
+	if(sessionStorage.getItem("34")){
 	  var field1=0,field2=0,field3=0;
           
 		$("#sendmessage").addClass("show");
@@ -83,4 +84,6 @@ function unlockbtn(){
 		
 	}
 }
+
+
 
